@@ -6,6 +6,7 @@ public class RandomScaler : MonoBehaviour
 {
     private Random _random = new Random((int) DateTime.Now.Ticks);
     private MovingAvg _ma = new MovingAvg(20);
+    private MovingAvg _rotateMa = new MovingAvg(20);
 
     public float direction = 0;
     private AudioSource _audioSource;
@@ -32,10 +33,13 @@ public class RandomScaler : MonoBehaviour
     {
         float change = (float) (_random.NextDouble() - 0.5 + direction);
         _ma.PUT(change);
+        _rotateMa.PUT((float) (_random.NextDouble()-0.5));
         
         gameObject.transform.localScale = gameObject.transform.localScale * (1 + Time.deltaTime * _ma.GETAvg());
         _audioVollume = _audioVollume * (1 + Time.deltaTime * _ma.GETAvg());
         _audioSource.volume = _audioVollume;
+        
+        gameObject.transform.Rotate(Vector3.up, 100*Time.deltaTime * _rotateMa.GETAvg());
     }
 }
 
