@@ -11,7 +11,7 @@ namespace desert
         {
             Vector3 forward = player.transform.forward;
             Debug.Log(forward);
-            player.transform.Translate(forward * (velocity * Time.deltaTime));
+            player.transform.position += forward * (velocity * Time.deltaTime);
         }
     }
 }

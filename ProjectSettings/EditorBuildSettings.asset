@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/desert.unity
     guid: 0da7f133ce2cf4903898d896edab6116
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/menu_scene.unity
     guid: 47fcbe87e2ece487b865b50894d2ba50
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/b_scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/i_scene.unity
     guid: 22f3c1142942b481cb53063666fb9f56
   m_configObjects: {}

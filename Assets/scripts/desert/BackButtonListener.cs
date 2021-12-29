@@ -9,7 +9,7 @@ namespace desert
         
         protected override void ClickAction()
         {
-            player.transform.Translate(player.transform.forward * (-velocity * Time.deltaTime));
+            player.transform.position -= player.transform.forward * (velocity * Time.deltaTime);
         }
     }
 }
